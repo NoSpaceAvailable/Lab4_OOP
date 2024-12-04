@@ -3,6 +3,9 @@
 
 using namespace std;
 
+/**
+ * Base class NhanVien. Dùng để kế thừa cho các lớp con
+ */
 class NhanVien {
     protected:
         string mnv, name;

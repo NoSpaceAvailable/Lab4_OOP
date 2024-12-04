@@ -6,6 +6,9 @@
 
 using namespace std;
 
+/**
+ * Base class của tất cả các loại gia súc
+ */
 class Cattle {
     protected:
         bool isHungry = false;
@@ -19,6 +22,9 @@ class Cattle {
         virtual void makeHungry() = 0;
 };
 
+/**
+ * Hàm tạo mặc định của lớp Cattle. Khởi tạo giới tính ngẫu nhiên
+ */
 Cattle::Cattle() {
     srand(time(NULL));
     int x = rand() % 2;

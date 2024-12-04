@@ -5,6 +5,10 @@
 
 using namespace std;
 
+/**
+ * Hàm main khởi tạo 5 loại phòng và tính doanh thu của từng loại phòng
+ * Sau đó so sánh doanh thu của từng loại phòng để xác định loại phòng có doanh thu cao nhất
+ */
 int main() {
     Deluxe a(5, 100000, 50000);
     Business b(5);

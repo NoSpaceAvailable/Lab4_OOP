@@ -4,6 +4,9 @@
 #include <iostream>
 #include <vector>
 
+/**
+ * Hàm làm tất cả các gia súc đều đói
+ */
 void makeAllHungry(vector<Cow*>& cows, vector<Goat*>& goats, vector<Sheep*>& sheeps) {
     for (int i = 0; i < cows.size(); i++) cows[i]->makeHungry();
     for (int i = 0; i < goats.size(); i++) goats[i]->makeHungry();
@@ -12,6 +15,16 @@ void makeAllHungry(vector<Cow*>& cows, vector<Goat*>& goats, vector<Sheep*>& she
 
 using namespace std;
 
+/**
+ * Hàm main làm các công việc sau:
+ * 1. Khởi tạo số lượng bò, dê, cừu
+ * 2. Khởi tạo các con bò, dê, cừu
+ * 3. Làm tất cả các con bò, dê, cừu đều đói
+ * 4. Cho ăn tất cả các con bò, dê, cừu
+ * 5. Sinh sản cho một số con bò, dê, cừu
+ * 6. In ra thống kê sau mùa sinh sản
+ * 7. In ra tổng lượng sữa mà nông trại thu được
+ */
 int main() {
     srand(time(NULL));
     int c, g, s; cout << "Nhập số lượng bò, dê, cừu: "; cin >> c >> g >> s;

@@ -14,10 +14,17 @@ class QuanLy : public NhanVien {
         float calculate_bounty() override;
 };
 
+/**
+ * Constructor của lớp QuanLy
+ * @param br tỉ lệ thưởng
+ */
 QuanLy::QuanLy(float br = 0) {
     this->bounty_rate = br;
 }
 
+/**
+ * Hiển thị toàn bộ thông tin của quản lý
+ */
 void QuanLy::display() {
     cout << fixed << setprecision(2);
     cout << "Quản lý: " << this->name << endl;
@@ -27,6 +34,9 @@ void QuanLy::display() {
     cout << "Thưởng: " << this->calculate_bounty() << endl;
 }
 
+/**
+ * Nhập thông tin của quản lý gồm tên, mã nhân viên, lương cơ bản và tỉ lệ thưởng
+ */
 void QuanLy::input() {
     cout << "Nhập tên: ";
     getline(cin, this->name);
@@ -35,6 +45,9 @@ void QuanLy::input() {
     cin.ignore(INT32_MAX, '\n');
 }
 
+/**
+ * Tính thưởng của quản lý
+ */
 float QuanLy::calculate_bounty() {
     return this->base_salary * this->bounty_rate;
 }
